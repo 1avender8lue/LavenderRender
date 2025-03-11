@@ -1,2 +1,2 @@
 # LavenderRender
- A path tracer in c#.
+A path tracer in c#.
