@@ -1,2 +1,7 @@
 # LavenderRender
-A path tracer in c#.
+一个用 c# 实现的路径追踪渲染器。
+
+----------------------------------------
+示例图片:
+
+![example](<img/800 x 800 20spp.png>)
