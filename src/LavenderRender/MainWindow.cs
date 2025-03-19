@@ -321,8 +321,8 @@ public partial class MainWindow : Form
                 UnitDirection hitPointLocalY = (hitRecord.HitNormal % hitPointLocalX).Normalize();
 
                 // random direction in local coordinate
-                double randomNumber1 = _random.NextSingle();
-                double randomNumber2 = _random.NextSingle();
+                double randomNumber1 = _random.NextDouble();
+                double randomNumber2 = _random.NextDouble();
 
                 double randomPointLocalX = Math.Sqrt(1.0d - randomNumber1 * randomNumber1) * Math.Cos(2.0d * Math.PI * randomNumber2);
                 double randomPointLocalY = Math.Sqrt(1.0d - randomNumber1 * randomNumber1) * Math.Sin(2.0d * Math.PI * randomNumber2);
@@ -330,8 +330,6 @@ public partial class MainWindow : Form
 
                 // convert random direction from local coordinate to world coordinate
                 UnitDirection randomDirection = (randomPointLocalX * hitPointLocalX + randomPointLocalY * hitPointLocalY + randomPointLocalZ * hitRecord.HitNormal).Normalize();
-
-
 
                 // shoot random ray on hemisphere
                 Ray randomRay = new Ray(hitRecord.HitPoint, randomDirection);
